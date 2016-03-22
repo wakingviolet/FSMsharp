@@ -6,6 +6,9 @@ Specially useful with Unity3D and MonoGame.
 # Usage example
 
 This simple example uses an enum of seasons to cycle between 4 different seasons. In this case the FSM is not particularly exciting, but shows most of the features.
+
+<img src="https://raw.githubusercontent.com/xanathar/FSMsharp/master/docs/seasons.svg" />
+
 Specifically:
 
 * Each state is created (fsm.Add ... )
