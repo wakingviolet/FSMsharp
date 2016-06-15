@@ -99,6 +99,7 @@ namespace FSMSharp
 			if (stateProgress >= 1f && m_CurrentStateBehaviour.NextStateSelector != null)
 			{
 				CurrentState = m_CurrentStateBehaviour.NextStateSelector();
+				m_StateAge = time;
 			}
 		}
 
@@ -139,6 +140,24 @@ namespace FSMSharp
 				throw new InvalidOperationException(string.Format("[FSM {0}] : Can't call 'Next' on current behaviour.", m_FsmName));
 		}
 
+		/// <summary>
+		/// Saves a snapshot of the FSM
+		/// </summary>
+		/// <returns>The snapshot.</returns>
+		public FsmSnapshot<T> SaveSnapshot()
+		{
+			return new FsmSnapshot<T>(m_StateAge, m_CurrentState);
+		}
+
+		/// <summary>
+		/// Restores a snapshot of the FSM taken with SaveSnapshot
+		/// </summary>
+		/// <param name="snap">The snapshot.</param>
+		public void RestoreSnapshot(FsmSnapshot<T> snap)
+		{
+			CurrentState = snap.CurrentState;
+			m_StateAge = snap.StateAge;
+		}
 	}
 
 }

@@ -37,6 +37,7 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FsmSnapshot.cs" />
     <Compile Include="FsmStateData.cs" />
     <Compile Include="FsmStateBehaviour.cs" />
     <Compile Include="FSM_QueueExtensions.cs" />
