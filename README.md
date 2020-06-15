@@ -1,7 +1,15 @@
 # FSMsharp
 Incredibly small finite state machine for .NET languages, written in C#. Useful for UIs and games. Runs in .NET, mono, Xamarin and Unity. 
+
 Specially useful with Unity3D and MonoGame.
+
+It's the core piece of logic used in the puzzle game [Waking Violet](https://www.nintendo.com/games/detail/waking-violet-switch/) to provide support for the "undo" and time travel mechanics.
+
  
+# Features
+* Lightweight
+* Supports saving and restoring snapshots of the FSM into a fixed size structure
+* Queueing of states
 
 # Usage example
 
