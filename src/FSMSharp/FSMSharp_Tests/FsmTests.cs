@@ -117,7 +117,7 @@ namespace FSMSharp_Tests
 			F.Process(5.1f);
 			Assert.AreEqual(2, F.CurrentState);
 
-			F.RestoreSnapshot(snap);
+			F.RestoreSnapshot(snap, false);
 			Assert.AreEqual(1, F.CurrentState);
 
 			F.Process(3f);
